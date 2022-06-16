@@ -39,10 +39,16 @@ public class Drops implements Listener {
 
                 loc.getWorld().dropItemNaturally(loc.add(0, 1, 0), sword());
             }
-
-            //0.5%
+        }
+        
+        else if (block.equals(Material.SAND)) {
+            //5%
             if (r <= 0.05) {
+                Bukkit.broadcastMessage((ChatColor.GOLD + "[" + ChatColor.DARK_RED + "!" + ChatColor.GOLD + "]" + " "
+                        + p.getDisplayName() + "" + ChatColor.BOLD + "" + ChatColor.GREEN + "Neimase srece..."));
 
+                loc.getWorld().playSound(loc, Sound.BLOCK_ANVIL_FALL, SoundCategory.BLOCKS, 7, 7);
+                loc.getWorld().spawnEntity(loc.add(0, 5, 0), EntityType.GHAST);
             }
         }
     }
