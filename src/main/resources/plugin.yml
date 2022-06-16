@@ -1,0 +1,10 @@
+name: UnkaSMP
+version: '${project.version}'
+main: io.github.tunafishyy.UnkaSMP
+api-version: 1.18
+authors: [ TunaFishyy ]
+description: Prilagodjeni dodatci za privatni MC server.
+commands:
+  unkasmp:
+    aliases: [unka, smp]
+    description: Glavna komanda UnkaSMP plugin-a preko kojeg doznajemo sve postojece podatke o istome.
