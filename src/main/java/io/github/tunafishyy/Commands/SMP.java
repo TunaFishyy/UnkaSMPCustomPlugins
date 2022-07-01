@@ -13,10 +13,10 @@ public class SMP implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (sender instanceof ConsoleCommandSender cmd) {
             consoleRun(cmd);
-            return false;
+            return true;
         } else if (sender instanceof Player p) {
             p.sendMessage("KOMANDA U IZRADNJI");
-            return false;
+            return true;
         }
 
         return false;
